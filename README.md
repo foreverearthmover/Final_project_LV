@@ -10,7 +10,10 @@ by Lilli (https://github.com/foreverearthmover) and Valeria (https://github.com/
   /circuits
   /diagrams
 /code
-  angel_firmware.ino
+  /demos
+    demo1.ino
+  /src
+    angel_firmware.ino
 /enclosure
   sketches/
   models/
