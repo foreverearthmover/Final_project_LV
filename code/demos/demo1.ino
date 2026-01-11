@@ -104,19 +104,26 @@ void checkButtons() {
     currentState = PRAYED;
     lastPrayTime = millis();
     petCounter = 0;
-    drawPrayedAngel();
+    drawCurrentState();
     delay(250);
   }
 
-  // PET BUTTON
+  // PET BUTTON, doesn't work, being instantly overwritten?
   if (digitalRead(buttonPet) == LOW) {
-    petCounter++;
-    if (petCounter >= PET_THRESHOLD) {
-      currentState = BLESSED;
-      drawAngelNumber();
-    }
-    delay(250);
+  petCounter++;
+
+  if (petCounter >= PET_THRESHOLD) {
+    currentState = BLESSED;
+    drawAngelNumber();
+    delay(3000);            // show blessing
+    petCounter = 0;
+    currentState = NEUTRAL; // return to normal
+    drawCurrentState();
   }
+
+  delay(250);
+}
+
 }
 
 // STATE UPDATE
@@ -125,14 +132,32 @@ void updateState() {
   if (currentState == PRAYED &&
       millis() - lastPrayTime > PRAY_TIMEOUT) {
     currentState = RUDE;
-    drawRudeAngel();
+    drawCurrentState();
+
+  }
+}
+
+void drawCurrentState() {
+  switch (currentState) {
+    case NEUTRAL:
+      drawNeutralAngel();
+      break;
+    case PRAYED:
+      drawPrayedAngel();
+      break;
+    case RUDE:
+      drawRudeAngel();
+      break;
+    case BLESSED:
+      drawBlessedAngelFace();
+      break;
   }
 }
 
 // ASK LOGIC
 void handleAsk() {
   display.clearDisplay();
-  drawAngelBase();
+  drawCurrentState(); // draw face first
 
   display.setTextSize(1);
   display.setTextColor(WHITE);
@@ -152,7 +177,11 @@ void handleAsk() {
   }
 
   display.display();
+
+  delay(3000);        // let user read
+  drawCurrentState(); // return to angel
 }
+
 
 // DRAWING FUNCTIONS
 
@@ -216,6 +245,27 @@ void drawRudeAngel() {
   display.drawLine(59, 24, 63, 24, WHITE);
   display.drawLine(65, 24, 69, 24, WHITE);
   display.drawLine(61, 31, 67, 31, WHITE);
+
+  display.display();
+}
+
+void drawBlessedAngelFace() {
+  drawAngelBase();
+
+  // Sparkly eyes
+  display.drawPixel(60, 25, WHITE);
+  display.drawPixel(62, 24, WHITE);
+  display.drawPixel(66, 24, WHITE);
+  display.drawPixel(68, 25, WHITE);
+
+  // Big smile
+  display.drawPixel(61, 30, WHITE);
+  display.drawPixel(62, 31, WHITE);
+  display.drawPixel(63, 32, WHITE);
+  display.drawPixel(64, 33, WHITE);
+  display.drawPixel(65, 32, WHITE);
+  display.drawPixel(66, 31, WHITE);
+  display.drawPixel(67, 30, WHITE);
 
   display.display();
 }
