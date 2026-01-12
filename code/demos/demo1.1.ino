@@ -1,7 +1,7 @@
 /***
   Tamagotchi Angel
   ---------------------------------
-  This demo ues Adafruit SSD1306 library to draw
+  This demo uses Adafruit SSD1306 library to draw
   a small angel and react to 3 buttons.
 
   Buttons:
