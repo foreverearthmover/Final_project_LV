@@ -1,11 +1,11 @@
 /***
   Tamagotchi Angel
   ---------------------------------
-  This demo uses Adafruit SSD1306 library to draw
+  This demo ues Adafruit SSD1306 library to draw
   a small angel and react to 3 buttons.
 
   Buttons:
-  ASK  -> D2
+  ASK  -> D2a
   PRAY -> D3
   PET  -> D4
 ***/
@@ -108,7 +108,7 @@ void checkButtons() {
     delay(250);
   }
 
-  // PET BUTTON, doesn't work, being instantly overwritten?
+  // PET BUTTON
   if (digitalRead(buttonPet) == LOW) {
   petCounter++;
 
@@ -178,7 +178,7 @@ void handleAsk() {
 
   display.display();
 
-  delay(3000);        // let user read
+  delay(3000);        // Let user read
   drawCurrentState(); // return to angel
 }
 
