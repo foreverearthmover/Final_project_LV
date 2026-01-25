@@ -161,12 +161,12 @@ void checkTilt() {
   tiltState = digitalRead(tiltPin);
 
   // Detect movement (HIGH → LOW)
-  if (waitingForShake &&
-      lastTiltState == HIGH &&
-      tiltState == LOW) {
+  if (waitingForShake && // only during ASK
+      lastTiltState == HIGH &&  // not shaken
+      tiltState == LOW) {  // shaken
 
     waitingForShake = false;
-    handleAsk();   // reuse your existing logic!
+    handleAsk();   // reuses existing logic
   }
 
   lastTiltState = tiltState;
