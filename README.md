@@ -2,6 +2,8 @@
 
 by Lilli (https://github.com/foreverearthmover) and Valeria (https://github.com/c-valeria-mj)
 
+[insert picture]
+
 ### Navigation
 
 ```
@@ -31,18 +33,25 @@ README.md
 | [enclosure](./enclosure)           | This is where you can find information about the tamagotchi case.        |  
 | [media](./media)                   | All photos and videos as well as bitmaps used can be found here.         |
 
-#### Project overview  
+### Project overview  
+In this project we worked on an angel tamagotchi that reacts to inputs and enters different states.  
+
+### Dependencies  
+Open your Arduino IDE and go to Sketch > Include Library > Manage Libraries, install these:  
+Adafruit_GFX Library  
+Adafruit_SSD1306 Library  
+CuteBuzzerSounds Library
 
 #### Hardware list  
-- Arduino Uno
-- Perfboard
-- Soldering Iron and Wire
+- Arduino Nano
+- 4x Mini Breadboard
 - Jumper Wires
-- 4x Resistors
+- 1x 10K Resistor
+- 1x Tilt Switch
 - 3x Buttons
 - 0.96" I2C OLED Display (SSD1306 Chip)
 - Passive Buzzer
-- Power Bank
+- USB to Mini-USB cable for Nano
 
 #### Wiring diagrams  
 
