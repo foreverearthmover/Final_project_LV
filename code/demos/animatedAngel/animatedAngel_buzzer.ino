@@ -71,7 +71,7 @@ const unsigned long floatInterval = 120; // ms
 
 // TIMING
 unsigned long lastPrayTime = 0;
-const unsigned long PRAY_TIMEOUT = 5000; // 15 seconds
+const unsigned long PRAY_TIMEOUT = 15000; // 15 seconds
 
 // ANGEL NUMBERS
 int angelNumbers[] = {111, 222, 333, 444, 555, 777, 888, 999};
@@ -130,11 +130,14 @@ void loop() {
 
   // MODE HANDLING
   if (mode == MODE_IDLE) {
+   display.clearDisplay();
     drawAngel();
+    display.display();
   }
 
   else if (mode == MODE_WAIT_SHAKE) {
 
+    display.clearDisplay();
     drawAngel();   // surprised angel animates
 
     // draw prompt text ON TOP
@@ -283,7 +286,6 @@ void handleAsk() {
 
 // DRAWING FUNCTIONS
 void drawAngel() {
-  display.clearDisplay();
 
   int y = angelBaseY + angelOffsetY;
 
@@ -305,8 +307,6 @@ void drawAngel() {
       display.drawBitmap(0, y, surprisedAngel, 128, 64, SSD1306_WHITE);
       break;
   }
-
-  display.display();
 }
 
 // Special events
