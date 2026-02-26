@@ -31,7 +31,7 @@ const int buttonPet = 4;
 const int buzzerPin= 5;
 
 // TILT SWITCH
-const int tiltPin = 6;
+const int tiltPin = 12; //changed from D6 to D12 due to wiring constraints
 int tiltState = HIGH;
 int lastTiltState = HIGH;
 
