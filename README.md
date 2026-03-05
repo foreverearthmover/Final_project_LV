@@ -1,4 +1,4 @@
-# Pocket Angel  
+# e-Angel  
 
 by Lilli (https://github.com/foreverearthmover) and Valeria (https://github.com/c-valeria-mj)
 
@@ -34,7 +34,7 @@ README.md
 | [media](./media)                   | All photos and videos as well as bitmaps used can be found here.         |
 
 ### Project overview  
-In this project we worked on an angel tamagotchi that reacts to inputs and enters different states.  
+In this project we worked on a pocket angel tamagotchi that reacts to button presses and enters different states based on interactions with the user.  
 
 ### Dependencies  
 Open your Arduino IDE and go to Sketch > Include Library > Manage Libraries, install these:  
