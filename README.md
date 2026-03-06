@@ -54,6 +54,7 @@ CuteBuzzerSounds Library
 - USB to Mini-USB cable for Nano
 
 #### Wiring diagrams  
+<img src="media/circuits/final_schematic.JPG" alt="Wiring diagram" width="300" height="200">
 
 #### Photos of prototypes  
 
