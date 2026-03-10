@@ -20,9 +20,10 @@ by Lilli (https://github.com/foreverearthmover) and Valeria (https://github.com/
   sketches/
   models/
 /media
-  bitmaps/
-  photos/
+  circuits/
   demo_video/
+  images/
+  videos/
 README.md
 ```
 
