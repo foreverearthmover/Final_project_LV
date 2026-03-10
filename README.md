@@ -2,7 +2,7 @@
 
 by Lilli (https://github.com/foreverearthmover) and Valeria (https://github.com/c-valeria-mj)
 
-<img src="media/images/Tamagotchi.webp" alt="angel tamagotchi" width="600" height="400">
+<img src="media/images/Tamagotchi.webp" alt="angel tamagotchi" width="710" height="510">
 
 ### Navigation
 
