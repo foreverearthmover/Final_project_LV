@@ -8,21 +8,24 @@ by Lilli (https://github.com/foreverearthmover) and Valeria (https://github.com/
 
 ```
 /docs
-  /concept
-  /circuits
-  /diagrams
+  documentation.pdf              // our documentation text
 /code
   /demos
-    demo1.ino
-  /src
-    angel_firmware.ino
-/enclosure
-  sketches/
-  models/
-/media
-  circuits/
-  demo_video/
+    demo1.1.ino                  // first demo file (updated)
+    demo_tilt.ino                // tilt function added
+    /animatedAngel            
+      animatedAngel.ino            // uses bitmap animations
+      animatedAngel_buzzer.ino     // uses buzzer sounds
+      animatedAngel_Demon.ino      // adds Demon state
+      bitmaps.h                    // bitmaps needed
+  /final_code
+    ino_code.ino                 // final code
+    bitmaps.h                    // final bitmap file
+/media                         // media referred to in documentation
+  circuits/                      
+  demo_video/                    // includes demo video
   images/
+    /enclosure
   videos/
 README.md
 ```
@@ -30,8 +33,7 @@ README.md
 | Item                               | Description                                                              |
 |------------------------------------|--------------------------------------------------------------------------|
 | [docs](./docs)                     | Documentation for our digital pet.                                       |
-| [code](./code)                     | Code for the tamagotchi is here.                                         |
-| [enclosure](./enclosure)           | This is where you can find information about the tamagotchi case.        |  
+| [code](./code)                     | Code for the tamagotchi is here.                                         | 
 | [media](./media)                   | All photos and videos as well as bitmaps used can be found here.         |
 
 ### Project overview  
@@ -45,7 +47,7 @@ CuteBuzzerSounds Library
 
 #### Hardware list  
 - Arduino Nano
-- 4x Mini Breadboard
+- 4x Mini Breadboards
 - Jumper Wires
 - 1x 10K Resistor
 - 1x Tilt Switch
