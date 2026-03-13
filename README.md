@@ -59,7 +59,5 @@ CuteBuzzerSounds Library
 #### Wiring diagrams  
 <img src="media/circuits/final_schematic.JPG" alt="Wiring diagram" width="300" height="200">
 
-#### Photos of prototypes  
-
 #### Usage  
 Download "ino_code.ino" and "bitmaps.h" from the [final_code](./code/final_code) folder and upload both files in your Arduino IDE. The files must be in the same directory.
