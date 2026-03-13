@@ -56,7 +56,7 @@ CuteBuzzerSounds Library
 - Passive Buzzer
 - USB to Mini-USB cable for Nano
 
-#### Wiring diagrams  
+#### Wiring diagram  
 <img src="media/circuits/final_schematic.JPG" alt="Wiring diagram" width="300" height="200">
 
 #### Usage  
